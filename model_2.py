@@ -34,4 +34,4 @@ y_preds = cls.predict_proba(eval_data.drop(columns=["ROW_ID"]))[:, cls.classes_ 
 # Make the submission file
 submission_df = pd.DataFrame({"ROW_ID": eval_data["ROW_ID"], "conversion": y_preds})
 submission_df["ROW_ID"] = submission_df["ROW_ID"].astype(int)
-submission_df.to_csv("model_1.csv", sep=",", index=False)
+submission_df.to_csv("model_2.csv", sep=",", index=False)
